@@ -1,7 +1,5 @@
-import time
 import data
 import allure
-
 
 @allure.suite('Тесты личного кабинете')
 class TestAccountPage:
@@ -34,6 +32,5 @@ class TestAccountPage:
 
         header_page.move_to_account()
         account_page.logout()
-        time.sleep(1)
 
         assert account_page.get_login_form_text() == data.LOGIN_FORM_TITLE
